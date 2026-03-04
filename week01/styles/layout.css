@@ -1,0 +1,55 @@
+body {
+  margin: 0px;
+  display: grid;
+  grid-template: auto 1fr auto / auto 1fr auto;
+}
+
+header {
+  grid-column: span 4;
+  background-color: rgb(88, 88, 88);
+  padding: 30px;
+  color: white;
+}
+
+nav {
+  grid-column: span 4;
+  background-color: rgb(29, 29, 29);
+  text-align: center;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0px;
+  color: white;
+}
+
+li {
+  margin: auto;
+}
+
+p {
+  margin: 10px 10px;
+}
+
+body main {
+  grid-column: 1/2;
+  background-color: rgb(194, 194, 194);
+  width: 70vw;
+  height: 300px;
+}
+
+body .right-content {
+  grid-column: 2/2;
+  width: 30vw;
+}
+
+body footer {
+  grid-row: 4/4;
+  grid-column: span 2;
+  background-color: rgb(88, 88, 88);
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
