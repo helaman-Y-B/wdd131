@@ -92,8 +92,13 @@ main h1 {
   padding: 10px;
 }
 
+.card li {
+  margin: 10px;
+}
+
 .card a {
   font-weight: 800;
+  font-size: larger;
 }
 
 .card #self-img {
