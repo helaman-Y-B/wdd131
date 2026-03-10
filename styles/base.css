@@ -1,32 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
-
-
 body {
   margin: 0px;
-  font-family: "Lato", sans-serif , serif;
+  font-family: "Lato", sans-serif, serif;
   font-weight: 400;
   font-style: normal;
   background-color: #e4e0f1;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "DM Sans", Arial, Helvetica;
-  font-optical-sizing: auto;
   font-weight: 800;
 }
 
 header {
   text-align: center;
   font-family: "DM Sans", sans-serif, Arial, Helvetica;
-  font-optical-sizing: auto;
   font-weight: 800;
-  font-style: bold;
-  padding: 30px;
   background-color: #1b2a41;
 }
 
 #course-title {
   color: rgb(238, 238, 238);
+  display: inline-block;
+  padding: 20px;
   font-size: larger;
 }
 
