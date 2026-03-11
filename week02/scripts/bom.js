@@ -1,7 +1,5 @@
-const { createElement } = require("react");
-
 let input = document.getElementById("favchap");
-let btn = document.getElementsByTagName("button");
+let btn = document.querySelector("button");
 let list = document.getElementById("list");
 
 function createLi() {
@@ -16,3 +14,19 @@ function createDeleteBtn(item) {
     deleteBtn.textContent = "❌";
     item.append(deleteBtn);
 }
+
+btn.addEventListener("click", function() {
+    if (input.value.trim() !== "") {
+        createLi(input.value);
+    } else {
+        input.value = "Invalid Input";
+        input.focus();
+    }
+});
+
+const deleteBtn = document.getElementsByClassName("deleteBtn");
+
+deleteBtn.addEventListener("click", function() {
+    list.removeChild(li);
+    input.focus();
+});
