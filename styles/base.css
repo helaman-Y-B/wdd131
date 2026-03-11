@@ -36,7 +36,6 @@ nav {
 #nav-bar {
   display: flex;
   list-style-type: none;
-  padding: 20px;
   margin: 0px;
 }
 
@@ -45,8 +44,13 @@ nav {
   text-decoration: none;
 }
 
+#nav-bar li:hover {
+  background-color: #85aed1;
+}
+
 #nav-bar li {
   margin: auto;
+  padding: 20px;
   color: rgb(238, 238, 238);
 }
 
@@ -92,8 +96,13 @@ main h1 {
   padding: 10px;
 }
 
+.card li {
+  margin: 10px;
+}
+
 .card a {
   font-weight: 800;
+  font-size: larger;
 }
 
 .card #self-img {
