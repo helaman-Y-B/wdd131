@@ -79,7 +79,6 @@ main h1 {
 main div {
   align-items: center;
   margin: auto;
-  align-items: center;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
