@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Place Info Page – Helamã Y. Barbour</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals - Helamã Yamashita Barbour - A web page to display data about an specific place.">
+    <meta name="author" content="Helamã Ymashita Barbour">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <span>LONDRINA</span>
+    </header>
+    <main>
+        <picture>
+            <source media="(width > 700px)" srcset="images/londrina-mid.webp">
+            <source media="(width > 1000px)" srcset="images/londrina-big.webp">
+            <img src="images/londrina.webp" alt="Hero Image">
+        </picture>
+        <div class="information" id="data">
+            <h2>Data</h2>
+            <ul></ul>
+        </div>
+        <div class="information" id="weather">
+            <h2>Wheather</h2>
+            <img id="icon" src="images/weather.svg" alt="weather icon">
+            <ul></ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> - Helamã Y. Barbour - Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

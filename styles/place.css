@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DM Sans", Arial, Helvetica;
+  font-weight: 800;
+}
+
+body {
+  background-color: rgb(204, 255, 255);
+  font-family: "Lato", sans-serif, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  background-color: rgb(55, 215, 255);
+  padding: 20px;
+  text-align: center;
+  font-family: "DM Sans", Arial, Helvetica;
+  font-weight: 800;
+  font-size: larger;
+}
+
+img {
+  width: 100%;
+  margin: auto;
+}
+
+picture {
+  align-items: center;
+}
+
+.information {
+  background-color: rgb(35, 67, 75);
+  color: rgb(204, 255, 255);
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.information h2 {
+  padding: 20px;
+}
+
+ul p {
+  margin: 20px 0;
+}
+
+#icon {
+  width: 50px;
+}
+
+footer {
+  text-align: center;
+  font-size: small;
+  background-color: rgb(55, 215, 255);
+  padding: 10px;
+}
