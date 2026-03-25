@@ -48,6 +48,28 @@
     grid-template-columns: 1fr 1fr;
     margin-top: 20px;
     transform: translateX(-5%);
+    z-index: 1;
+  }
+
+  .title::after {
+    content: "";
+    background-color: var(--main-color);
+    position: absolute;
+    z-index: -1;
+    transform: translateX(5%);
+  }
+
+  #data .title::after {
+    width: 245px;
+    height: 50px;
+    margin-right: 10px;
+    bottom: 10px;
+  }
+
+  #weather .title::after {
+    width: 195px;
+    height: 50px;
+    bottom: 10px;
   }
 
   #icon {

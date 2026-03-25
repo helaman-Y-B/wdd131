@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+:root {
+  --main-color: rgb(204, 255, 255);
+}
+
 h1,
 h2,
 h3 {
@@ -11,7 +15,7 @@ h3 {
 }
 
 body {
-  background-color: rgb(204, 255, 255);
+  background-color: var(--main-color);
   font-family: "Lato", sans-serif, serif;
   font-weight: 400;
   font-style: normal;
@@ -37,7 +41,7 @@ picture {
 
 .information {
   background-color: rgb(35, 67, 75);
-  color: rgb(204, 255, 255);
+  color: var(--main-color);
   padding: 20px;
   align-items: center;
   text-align: center;
