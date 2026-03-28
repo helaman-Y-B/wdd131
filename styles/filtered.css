@@ -93,18 +93,26 @@ figure {
   display: grid;
 }
 
-figcaption {
-  grid-row: 2/2;
+figure h2 {
+  grid-row: 1;
   text-align: center;
   margin: 10px auto 10px auto;
+  color: rgb(238, 238, 238);
+}
+
+figcaption {
+  grid-row: 2;
+  text-align: center;
+  margin: 10px auto 10px auto;
+  padding: 10px;
   color: rgb(238, 238, 238);
   max-width: 250px;
 }
 
 figure img {
-  grid-row: 1/2;
-  border-radius: 10px 10px 0px 0px;
-  max-width: 250px;
+  grid-row: 3;
+  border-radius: 0px 0px 10px 10px;
+  max-width: max-content;
 }
 
 footer {

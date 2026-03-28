@@ -105,14 +105,17 @@ temples.forEach(temple => {
     const pic = document.createElement("figure");
     const img = document.createElement("img");
     const cap = document.createElement("figcaption");
+    const title = document.createElement("h2");
 
     // Creates attributes for the elements
     img.setAttribute("src", temple.imageUrl);
     img.setAttribute("alt", "TempleImg");
-    cap.innerHTML = `${temple.templeName}<br>The temple is located in ${temple.location}<br>Dedicated in ${temple.dedicated}<br>The are of the temple is ${temple.area} Square Feet`;
+    title.innerText = `${temple.templeName}`
+    cap.innerHTML = `The temple is located in ${temple.location}<br>Dedicated in ${temple.dedicated}<br>The are of the temple is ${temple.area} Square Feet`;
 
     // Append elements
     div.appendChild(pic);
+    pic.appendChild(title);
     pic.appendChild(img);
     pic.appendChild(cap);
 })
