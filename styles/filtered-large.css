@@ -1,0 +1,30 @@
+@media screen and (min-width: 900px) {
+  header {
+    display: flex;
+  }
+
+  #title {
+    width: 50%;
+    text-align: left;
+  }
+
+  nav {
+    display: flex;
+    width: 50%;
+    flex-direction: row-reverse;
+    background-color: #1b2a41;
+  }
+
+  nav img {
+    display: none;
+  }
+
+  ul {
+    flex-direction: row;
+  }
+
+  ul li {
+    display: block;
+    margin: auto 20px;
+  }
+}
