@@ -67,7 +67,7 @@ ul li {
 }
 
 main {
-  max-width: 900px;
+  max-width: 1000px;
   padding: 30px;
   margin: auto;
 }
@@ -91,6 +91,7 @@ figure {
   border: #1b2a41 solid 5px;
   border-radius: 10px;
   display: grid;
+  width: 100%;
 }
 
 figure h2 {
@@ -98,21 +99,22 @@ figure h2 {
   text-align: center;
   margin: 10px auto 10px auto;
   color: rgb(238, 238, 238);
+  width: 100%;
 }
 
 figcaption {
   grid-row: 2;
   text-align: center;
   margin: 10px auto 10px auto;
-  padding: 10px;
   color: rgb(238, 238, 238);
   max-width: 250px;
+  width: 100%;
 }
 
 figure img {
   grid-row: 3;
   border-radius: 0px 0px 10px 10px;
-  max-width: max-content;
+  width: 100%;
 }
 
 footer {
@@ -122,4 +124,36 @@ footer {
   color: rgb(238, 238, 238);
   margin-top: 20px;
   padding: 10px;
+}
+
+@media screen and (min-width: 450px) {
+  figure {
+    margin: auto;
+    align-items: center;
+    background-color: #324a5f;
+    border: #1b2a41 solid 5px;
+    border-radius: 10px;
+    display: grid;
+    max-width: 300px;
+  }
+
+  figure h2 {
+    grid-row: 1;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    color: rgb(238, 238, 238);
+  }
+
+  figcaption {
+    grid-row: 2;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    color: rgb(238, 238, 238);
+    max-width: 250px;
+  }
+
+  figure img {
+    grid-row: 3;
+    border-radius: 0px 0px 10px 10px;
+  }
 }
