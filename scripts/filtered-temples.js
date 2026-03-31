@@ -126,8 +126,8 @@ temples.forEach(temple => {
 const filterOptions = document.querySelectorAll("li");
 
 filterOptions.forEach(option => {
-
-  option.addEventListener("click", () => {
+  option.addEventListener("click", (event) => {
+    event.preventDefault();
     div.innerHTML = "";
     if(option.innerText == "Home") {
       allTemples();
