@@ -98,8 +98,9 @@ const temples = [
   // Add more temple objects here...
 ];
 
+const div = document.querySelector("#temples-display");
+
 temples.forEach(temple => {
-    const div = document.querySelector("#temples-display");
 
     // Creates elements
     const pic = document.createElement("figure");
@@ -119,3 +120,170 @@ temples.forEach(temple => {
     pic.appendChild(img);
     pic.appendChild(cap);
 })
+
+// Filters command:
+
+const filterOptions = document.querySelectorAll("li");
+
+filterOptions.forEach(option => {
+
+  option.addEventListener("click", () => {
+    div.innerHTML = "";
+    if(option.innerText == "Home") {
+      allTemples();
+    } else if(option.innerText == "Old") {
+      oldTemples();
+    } else if(option.innerText == "New") {
+      newTemples();
+    } else if(option.innerText == "Large") {
+      largeTemples();
+    } else if(option.innerText == "Small") {
+      smallTemples();
+    }
+  })
+});
+
+
+// Filters:
+
+function oldTemples() {
+  
+  temples.forEach(temple => {
+    const year = temple.dedicated.split(",");
+    const yearInt = parseInt(year[0]);
+    if(yearInt <= 1900) {
+      const mainH = document.querySelector("h1");
+
+      // Creates elements
+      const pic = document.createElement("figure");
+      const img = document.createElement("img");
+      const cap = document.createElement("figcaption");
+      const title = document.createElement("h2");
+
+      // Creates attributes for the elements
+      img.setAttribute("src", temple.imageUrl);
+      img.setAttribute("alt", "TempleImg");
+      title.innerText = `${temple.templeName}`
+      cap.innerHTML = `The temple is located in ${temple.location}<br>Dedicated in ${temple.dedicated}<br>The are of the temple is ${temple.area} Square Feet`;
+      mainH.innerText = "Old temples"
+
+      // Append elements
+      div.appendChild(pic);
+      pic.appendChild(title);
+      pic.appendChild(img);
+      pic.appendChild(cap);
+    }
+  });
+}
+
+function newTemples() {
+  
+  temples.forEach(temple => {
+    const year = temple.dedicated.split(",");
+    const yearInt = parseInt(year[0]);
+    if(yearInt >= 2000) {
+      const mainH = document.querySelector("h1");
+
+      // Creates elements
+      const pic = document.createElement("figure");
+      const img = document.createElement("img");
+      const cap = document.createElement("figcaption");
+      const title = document.createElement("h2");
+
+      // Creates attributes for the elements
+      img.setAttribute("src", temple.imageUrl);
+      img.setAttribute("alt", "TempleImg");
+      title.innerText = `${temple.templeName}`
+      cap.innerHTML = `The temple is located in ${temple.location}<br>Dedicated in ${temple.dedicated}<br>The are of the temple is ${temple.area} Square Feet`;
+      mainH.innerText = "New temples"
+
+      // Append elements
+      div.appendChild(pic);
+      pic.appendChild(title);
+      pic.appendChild(img);
+      pic.appendChild(cap);
+    }
+  });
+}
+
+function largeTemples() {
+  
+  temples.forEach(temple => {
+    if(temple.area >= 90000) {
+      const mainH = document.querySelector("h1");
+
+      // Creates elements
+      const pic = document.createElement("figure");
+      const img = document.createElement("img");
+      const cap = document.createElement("figcaption");
+      const title = document.createElement("h2");
+
+      // Creates attributes for the elements
+      img.setAttribute("src", temple.imageUrl);
+      img.setAttribute("alt", "TempleImg");
+      title.innerText = `${temple.templeName}`
+      cap.innerHTML = `The temple is located in ${temple.location}<br>Dedicated in ${temple.dedicated}<br>The are of the temple is ${temple.area} Square Feet`;
+      mainH.innerText = "Large temples"
+
+      // Append elements
+      div.appendChild(pic);
+      pic.appendChild(title);
+      pic.appendChild(img);
+      pic.appendChild(cap);
+    }
+  });
+}
+
+function smallTemples() {
+  
+  temples.forEach(temple => {
+    if(temple.area <= 10000) {
+      const mainH = document.querySelector("h1");
+
+      // Creates elements
+      const pic = document.createElement("figure");
+      const img = document.createElement("img");
+      const cap = document.createElement("figcaption");
+      const title = document.createElement("h2");
+
+      // Creates attributes for the elements
+      img.setAttribute("src", temple.imageUrl);
+      img.setAttribute("alt", "TempleImg");
+      title.innerText = `${temple.templeName}`
+      cap.innerHTML = `The temple is located in ${temple.location}<br>Dedicated in ${temple.dedicated}<br>The are of the temple is ${temple.area} Square Feet`;
+      mainH.innerText = "Small temples"
+
+      // Append elements
+      div.appendChild(pic);
+      pic.appendChild(title);
+      pic.appendChild(img);
+      pic.appendChild(cap);
+    }
+  });
+}
+
+function allTemples() {
+  
+  temples.forEach(temple => {
+    const mainH = document.querySelector("h1");
+
+    // Creates elements
+    const pic = document.createElement("figure");
+    const img = document.createElement("img");
+    const cap = document.createElement("figcaption");
+    const title = document.createElement("h2");
+
+    // Creates attributes for the elements
+    img.setAttribute("src", temple.imageUrl);
+    img.setAttribute("alt", "TempleImg");
+    title.innerText = `${temple.templeName}`
+    cap.innerHTML = `The temple is located in ${temple.location}<br>Dedicated in ${temple.dedicated}<br>The are of the temple is ${temple.area} Square Feet`;
+    mainH.innerText = "All temples"
+
+    // Append elements
+    div.appendChild(pic);
+    pic.appendChild(title);
+    pic.appendChild(img);
+    pic.appendChild(cap);
+  })
+}
