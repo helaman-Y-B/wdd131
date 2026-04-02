@@ -153,6 +153,7 @@ header {
     padding: 20px;
     border-radius: 10px;
     border-width: 2px;
+    margin: 10px 0px;
 }
 
 #frame-small footer {
@@ -161,6 +162,39 @@ header {
     background-color: #1b2a41;
     text-align: center;
     padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form label {
+    margin: 10px 0px;
+}
+
+form input {
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+textarea {
+    padding: 20px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+button {
+    background-color: #1b2a41;
+    color: #ffffff;
+    font-family: "Figtree", Arial, Helvetica;
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 1px;
+    margin: 10px 0px;
 }
 
 #frame-large {
@@ -212,5 +246,86 @@ header {
     padding: 20px;
 }
 
+#frame-large main div:nth-child(1) {
+    margin: 10px 0px;
+}
+
+#frame-large main div:nth-child(2) {
+    margin: 10px 0px;
+}
+
+#remember-frame li {
+    background-color: #3d5b88;
+    display: flex;
+    text-align: left;
+    margin: 10px 0px;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#remember-frame li div {
+    display: flex;
+    background-color: #3d5b88;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px;
+    padding: 5px;
+}
+
+#remember-frame li div button {
+    margin: 20px;
+}
+
+.check {
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (min-width: 800px) {
+  #frame-large main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  #frame-large main div:nth-child(1) {
+    grid-column: 1;
+  }
+
+  #frame-large main div:nth-child(2) {
+    grid-column: 3 / 3;
+    grid-row: 2 / 2;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: span 3;
+    grid-row: 3;
+    text-align: left;
+  }
+
+  #remember-frame #frame-large #large-remember div {
+    grid-column: span 3;
+  }
+
+  #remember-frame #frame-large #large-remember div ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+  }
+
+  #remember-frame #frame-large #large-remember div ul li {
+    max-width: 250px;
+    width: 100%;
+  }
+}
 
 
