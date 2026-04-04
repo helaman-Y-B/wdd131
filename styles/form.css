@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DM Sans", Arial, Helvetica;
+  font-weight: 800;
+}
+
+body {
+  font-family: "Lato", sans-serif, serif;
+  font-weight: 400;
+  background-color: antiquewhite;
+}
+
+header {
+  background-color: rgb(255, 176, 72);
+  text-align: center;
+  padding: 20px;
+}
+
+main {
+  background-color: rgb(255, 145, 0);
+  padding: 10px;
+}
+
+fieldset {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: rgb(255, 176, 72);
+}
+
+legend {
+  font-family: "DM Sans", Arial, Helvetica;
+  font-weight: 800;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(255, 176, 72);
+}
+
+select {
+  height: 30px;
+  width: 100%;
+}
+
+#rating-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#rating-box div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+}
+
+.stars-input {
+  width: 17px;
+  height: 17px;
+}
+
+#date-installation {
+  width: 100%;
+  height: 30px;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+}
+
+#username-box {
+  width: 100%;
+  height: 30px;
+}
+
+.checkbox {
+  align-items: center;
+  margin: 10px;
+}
+
+.checkbox input {
+  width: 19px;
+  height: 19px;
+}
+
+.checkbox label {
+  margin-left: 10px;
+}

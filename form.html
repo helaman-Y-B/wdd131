@@ -19,7 +19,9 @@
 </head>
 
 <body>
-    <header>Product Review</header>
+    <header>
+        <h1>Product Review</h1>
+    </header>
     <main>
         <form action="review.html" method="get">
             <fieldset>
@@ -35,25 +37,27 @@
             </fieldset>
             <fieldset>
                 <legend>Overall Rating</legend>
-                <div>
-                    <label for="1star">☆</label>
-                    <input type="radio" name="rating" id="1star" value="☆" required>
-                </div>
-                <div>
-                    <label for="2star">☆☆</label>
-                    <input type="radio" name="rating" id="2star" value="☆☆" required>
-                </div>
-                <div>
-                    <label for="3star">☆☆☆</label>
-                    <input type="radio" name="rating" id="3star" value="☆☆☆" required>
-                </div>
-                <div>
-                    <label for="4star">☆☆☆☆</label>
-                    <input type="radio" name="rating" id="4star" value="☆☆☆☆" required>
-                </div>
-                <div>
-                    <label for="5star">☆☆☆☆☆</label>
-                    <input type="radio" name="rating" id="5star" value="☆☆☆☆☆" required>
+                <div id="rating-box">
+                    <div>
+                        <label for="1star">☆</label>
+                        <input class="stars-input" type="radio" name="rating" id="1star" value="☆" required>
+                    </div>
+                    <div>
+                        <label for="2star">☆☆</label>
+                        <input class="stars-input" type="radio" name="rating" id="2star" value="☆☆" required>
+                    </div>
+                    <div>
+                        <label for="3star">☆☆☆</label>
+                        <input class="stars-input" type="radio" name="rating" id="3star" value="☆☆☆" required>
+                    </div>
+                    <div>
+                        <label for="4star">☆☆☆☆</label>
+                        <input class="stars-input" type="radio" name="rating" id="4star" value="☆☆☆☆" required>
+                    </div>
+                    <div>
+                        <label for="5star">☆☆☆☆☆</label>
+                        <input class="stars-input" type="radio" name="rating" id="5star" value="☆☆☆☆☆" required>
+                    </div>
                 </div>
             </fieldset>
             <fieldset>
@@ -62,19 +66,19 @@
             </fieldset>
             <fieldset>
                 <legend>Which features did you find useful in the product?<br>(Check all that apply)</legend>
-                <div>
+                <div class="checkbox">
                     <input type="checkbox" name="feature" id="durability">
                     <label for="durability">Durability</label>
                 </div>
-                <div>
+                <div class="checkbox">
                     <input type="checkbox" name="feature" id="ease">
                     <label for="ease">Ease of Use</label>
                 </div>
-                <div>
+                <div class="checkbox">
                     <input type="checkbox" name="feature" id="performance">
                     <label for="performance">Performance</label>
                 </div>
-                <div>
+                <div class="checkbox">
                     <input type="checkbox" name="feature" id="design">
                     <label for="design">Desing</label>
                 </div>
