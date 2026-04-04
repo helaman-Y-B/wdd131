@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <Form></Form>
+    </title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Helamã Yamashita Barbour - A form page">
+    <meta name="author" content="Helamã Ymashita Barbour">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>Product Review</header>
+    <main>
+        <form action="review.html" method="get">
+            <fieldset>
+                <legend>Product Name</legend>
+                <div>
+                    <select name="product" id="product" value="Select a Product">
+                        <option value="" disabled selected>Select a Product ...</option>
+                        <option value="p1">Product 1</option>
+                        <option value="p2">Product 2</option>
+                        <option value="p3">Product 3</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Overall Rating</legend>
+                <div>
+                    <label for="1star">☆</label>
+                    <input type="radio" name="rating" id="1star" value="☆" required>
+                </div>
+                <div>
+                    <label for="2star">☆☆</label>
+                    <input type="radio" name="rating" id="2star" value="☆☆" required>
+                </div>
+                <div>
+                    <label for="3star">☆☆☆</label>
+                    <input type="radio" name="rating" id="3star" value="☆☆☆" required>
+                </div>
+                <div>
+                    <label for="4star">☆☆☆☆</label>
+                    <input type="radio" name="rating" id="4star" value="☆☆☆☆" required>
+                </div>
+                <div>
+                    <label for="5star">☆☆☆☆☆</label>
+                    <input type="radio" name="rating" id="5star" value="☆☆☆☆☆" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Date of installation</legend>
+                <input type="date" name="date" id="date-installation" required>
+            </fieldset>
+            <fieldset>
+                <legend>Which features did you find useful in the product?<br>(Check all that apply)</legend>
+                <div>
+                    <input type="checkbox" name="feature" id="durability">
+                    <label for="durability">Durability</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="feature" id="ease">
+                    <label for="ease">Ease of Use</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="feature" id="performance">
+                    <label for="performance">Performance</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="feature" id="design">
+                    <label for="design">Desing</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Written Review <p>(Optional)</p>
+                </legend>
+                <textarea name="review" id="user-review"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Your Name <p>(Optional)</p>
+                </legend>
+                <input type="text" name="name" id="username-box">
+            </fieldset>
+            <input type="submit" value="Post Review">
+
+        </form>
+    </main>
+</body>
+
+</html>
