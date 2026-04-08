@@ -11,11 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/home.css">
     <script src="scripts/siteplan.js" defer></script>
 </head>
 <body>
     <header>
-        Remember Again
+        <h1>Remember Again</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -36,15 +37,15 @@
             <h3>Here's a preview of how it works:</h3>
             <div>
                 <ul>
-                    <li id="past">
+                    <li class="task" id="past">
                         Buy new cloths
                         <div>
-                            <p>Expiration: 2023-12-31</p>
+                            <p>Expiration: Past due by 21 days</p>
                             <button>Delete</button>
                             <input type="checkbox" name="preview" class="check">
                         </div>
                     </li>
-                    <li id="today">
+                    <li class="task" id="today">
                         Excises: Run 5km
                         <div>
                             <p>Expiration: Today</p>
@@ -52,7 +53,7 @@
                             <input type="checkbox" name="preview" class="check">
                         </div>
                     </li>
-                    <li id="due">
+                    <li class="task" id="due">
                         Create a new website
                         <div>
                             <p>Expiration: 2026-12-31</p>
