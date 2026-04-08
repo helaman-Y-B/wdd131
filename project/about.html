@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remember Again</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals - Helamã Yamashita Barbour - Home page for the remember again website">
+    <meta name="author" content="Helamã Yamashita Barbour">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/siteplan.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Remember Again</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Remember</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Want to talk to us?</h1>
+        <h2>We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out to us. Your thoughts and ideas are important to us, and we're here to listen.</h2>
+        <form action="thankyou.html" method="post">
+            <fieldset>
+                <legend>Your name</legend>
+                <input type="text" id="name" name="name" required>
+            </fieldset>
+            <fieldset>
+                <legend>Your email</legend>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+            <fieldset>
+                <legend>Your message</legend>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </fieldset>
+            <button type="submit">Send Message</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2026 Remember Again. All rights reserved.</p>
+    </footer>
+</body>
+</html>

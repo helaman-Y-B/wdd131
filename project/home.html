@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remember Again</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals - Helamã Yamashita Barbour - Home page for the remember again website">
+    <meta name="author" content="Helamã Yamashita Barbour">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/siteplan.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Remember Again</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Remember</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to Remember Again</h1>
+        <h2>Because your best ideas shouldn’t disappear just because life got busy.</h2>
+        <div id="quick">
+            <h3>What's on your mind right now?</h3>
+            <p>Remember Again is here to help you capture those fleeting thoughts, brilliant ideas, and important tasks before they slip away. Whether it's a sudden inspiration, a to-do list item, or a random thought, our platform provides a simple and intuitive way to jot it down and keep it safe for later.</p>
+            <a href="remember.html">Remember It!</a>
+        </div>
+        <div id="demo">
+            <h3>Here's a preview of how it works:</h3>
+            <div>
+                <ul>
+                    <li class="task" id="past">
+                        Buy new cloths
+                        <div>
+                            <p>Expiration: Past due by 21 days</p>
+                            <button>Delete</button>
+                            <input type="checkbox" name="preview" class="check">
+                        </div>
+                    </li>
+                    <li class="task" id="today">
+                        Excises: Run 5km
+                        <div>
+                            <p>Expiration: Today</p>
+                            <button>Delete</button>
+                            <input type="checkbox" name="preview" class="check">
+                        </div>
+                    </li>
+                    <li class="task" id="due">
+                        Create a new website
+                        <div>
+                            <p>Expiration: 2026-12-31</p>
+                            <button>Delete</button>
+                            <input type="checkbox" name="preview" class="check">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Remember Again. All rights reserved.</p>
+    </footer>
+</body>
+</html>
