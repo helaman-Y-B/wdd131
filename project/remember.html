@@ -12,39 +12,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/remember.css">
-    <script src="scripts/siteplan.js" defer></script>
+    <link rel="stylesheet" href="styles/remember-large.css">
+    <script src="scripts/script.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Remember Again</h1>
         <nav>
+            <p id="navBtp"><></p>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Remember</a></li>
+                <li><a href="remember.html">Remember</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <div id="menu">
+            <button id="add-task">Add Task</button>
+            <button id="edit-task">Edit Task</button>
+        </div>
         <div id="tasks">
             <h2>My tasks</h2>
             <ul>
                 <li class="task" id="past">Task 1
                     <div>
                         <button>Delete</button>
-                        <input type="checkbox" name="check-task" id="task1">
+                        <input type="checkbox" class="checkbox" name="check-task" id="task1">
                     </div>
                 </li>
                 <li class="task" id="today">Task 2
                     <div>
                         <button>Delete</button>
-                        <input type="checkbox" name="check-task" id="task2">
+                        <input type="checkbox" class="checkbox" name="check-task" id="task2">
                     </div>
                 </li>
                 <li class="task" id="due">Task 3
                     <div>
                         <button>Delete</button>
-                        <input type="checkbox" name="check-task" id="task3">
+                        <input type="checkbox" class="checkbox" name="check-task" id="task3">
                     </div>
                 </li>
             </ul>

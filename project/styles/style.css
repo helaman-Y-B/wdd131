@@ -46,6 +46,13 @@ nav {
     width: 100%;
 }
 
+#navBtp {
+    font-size: 2rem;
+    color: #fff;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -54,6 +61,7 @@ nav ul {
 }
 
 nav ul li {
+    display: none;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -78,4 +86,21 @@ footer {
     text-align: center;
     padding: 20px 0;
     font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+    nav ul li {
+        display: block;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav p {
+        display: none;
+    }
 }
