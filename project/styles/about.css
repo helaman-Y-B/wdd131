@@ -1,0 +1,51 @@
+main {
+    border: 5px none #DB0015;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 20px;
+    background-color: #FF5A55;
+}
+
+main h1, h2 {
+    text-align: center;
+}
+
+form {
+    background-color: #DB0015;
+    padding: 20px;
+    margin: 20px auto;
+    border: 2px dashed #ffffff;
+    border-radius: 10px;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 20px;
+    background-color: #1b2a41;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    width: 100%;
+    cursor: pointer;
+}
