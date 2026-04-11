@@ -6,7 +6,7 @@ navbutton.addEventListener('click', () => {
     navItems.forEach(item => {
         if (item.style.display === 'block') {
             item.style.display = 'none';
-            navbutton.textContent = '<>';
+            navbutton.textContent = '--';
         } else {
             item.style.display = 'block';
             navbutton.textContent = 'X';
