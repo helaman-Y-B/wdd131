@@ -42,3 +42,16 @@ function deleteTaskFromLocal(id) {
     localStorage.setItem("myTasks", JSON.stringify(tasks));
 }
 
+// Handles the checkbox change event
+taskList.addEventListener("change", (e) => {
+  if (e.target.classList.contains("checkbox")) {
+    const taskItem = e.target.closest(".task");
+    const taskId = Number(taskItem.dataset.id);
+    const tasks = JSON.parse(localStorage.getItem("myTasks")) || [];
+    const task = tasks.find(task => task.id === taskId);
+    if (task) {
+      task.completed = e.target.checked;
+      localStorage.setItem("myTasks", JSON.stringify(tasks));
+    }
+  }
+});
