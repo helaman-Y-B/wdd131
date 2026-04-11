@@ -151,3 +151,5 @@ function saveInLocal (data, id) {
 
     localStorage.setItem("myTasks", JSON.stringify(existingTasks));
 }
+
+export { dueStyle };
