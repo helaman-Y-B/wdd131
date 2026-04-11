@@ -25,9 +25,20 @@ taskList.addEventListener("click", (e) => {
         const taskItem = e.target.closest(".task");
         
         if (taskItem) {
+            const taskId = Number(taskItem.dataset.id);
+            deleteTaskFromLocal(taskId)
             taskItem.remove();
-            console.log("Task deleted!");
+            console.log(`Task deleted with ID: ${taskId}`);
         }
     }
 });
+
+function deleteTaskFromLocal(id) {
+    // Get list if exists
+    let tasks = JSON.parse(localStorage.getItem("myTasks")) || [];
+
+    tasks = tasks.filter(task => task.id !== id);
+
+    localStorage.setItem("myTasks", JSON.stringify(tasks));
+}
 

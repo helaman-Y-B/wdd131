@@ -42,22 +42,23 @@ addTaskBtn.addEventListener("click", () => {
 
     // Add Task Functionality
     const submitTaskBtn = document.getElementById("submit-task");
+    const id = Date.now();
     submitTaskBtn.addEventListener("click", () => {
         const taskInput = document.getElementById("task-input").value;
         if (taskInput) {
             const taskListDiv = document.querySelector("#tasks ul");
             taskListDiv.innerHTML += `
-                <li class="task">
+                <li class="task" data-id="${id}">
                 ${taskInput[0].toUpperCase() + taskInput.slice(1)}
                     <div>
                         <span class="due-date">Due: ${document.getElementById("due-date").value}</span>
                         <span class="notes">Notes: ${document.getElementById("task-notes").value}</span>
-                        <button class="deleteBtn" id="btn${Date.now()}">Delete</button>
+                        <button class="deleteBtn">Delete</button>
                         <input type="checkbox" class="checkbox" name="check-task">
                     </div>
                 </li>
             `;
-            
+            saveInLocal(taskInput, id)
             dueStyle();
             formCount--;
             formPlace.removeChild(document.getElementById("task-form"));
@@ -133,4 +134,20 @@ function compareDates(dueDate, task) {
             }
         }
     }
+}
+
+function saveInLocal (data, id) {
+    // Checks if theres already data inside the localStorage
+    const existingTasks = JSON.parse(localStorage.getItem("myTasks")) || [];
+    const newTask = {
+        id: id,
+        task: data[0].toUpperCase() + data.slice(1),
+        date: document.getElementById("due-date").value,
+        notes: document.getElementById("task-notes").value,
+        completed: false
+    };
+
+    existingTasks.push(newTask);
+
+    localStorage.setItem("myTasks", JSON.stringify(existingTasks));
 }
