@@ -1,6 +1,6 @@
 // Opens a form to add a task when the "Add Task" button is clicked
 const addTaskBtn = document.getElementById("add-task");
-let formCount = 0; // To keep track of the number of forms created
+let formCount = 0; //Counts the amount of forms.
 
 addTaskBtn.addEventListener("click", () => {
     const taskForm = document.createElement("form");
@@ -17,15 +17,15 @@ addTaskBtn.addEventListener("click", () => {
     taskForm.innerHTML = `
         <fieldset>
             <legend>Enter task</legend>
-            <input type="text" id="task-input" placeholder="Buy...">
+            <input type="text" id="task-input" placeholder="Buy..." required>
         </fieldset>
         <fieldset>
             <legend>Due date</legend>
-            <input type="date" id="due-date">
+            <input type="date" id="due-date" required>
         </fieldset>
         <fieldset>
             <legend>Notes</legend>
-            <input type="text" id="task-notes" placeholder="Additional notes...">
+            <textarea id="task-notes" name="message" rows="5" placeholder="Additional notes..."></textarea>
         </fieldset>
         <button id="submit-task" type="button">Add</button>
         <button id="cancel-task" type="button">Cancel</button>
@@ -52,11 +52,12 @@ addTaskBtn.addEventListener("click", () => {
                     <div>
                         <span class="due-date">Due: ${document.getElementById("due-date").value}</span>
                         <span class="notes">Notes: ${document.getElementById("task-notes").value}</span>
-                        <button>Delete</button>
+                        <button class="deleteBtn" id="btn${Date.now()}">Delete</button>
                         <input type="checkbox" class="checkbox" name="check-task">
                     </div>
                 </li>
             `;
+            
             dueStyle();
             formCount--;
             formPlace.removeChild(document.getElementById("task-form"));

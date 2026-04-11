@@ -1,189 +1,197 @@
 main {
-    padding: 20px;
+  padding: 20px;
 }
 
 #menu {
-    background-color: #FF5A55;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 2px dashed #ffffff;
-    border-radius: 10px;
+  background-color: #ff5a55;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px dashed #ffffff;
+  border-radius: 10px;
 }
 
 #menu button {
-    background-color: #1b2a41;
-    color: #ffffff;
-    font-family: "Figtree", Arial, Helvetica;
-    font-weight: 800;
-    font-size: 1.2rem;
-    padding: 20px;
-    border-radius: 5px;
-    border-width: 1px;
-    margin: 10px auto;
-    width: 75%;
-    cursor: pointer;
+  background-color: #1b2a41;
+  color: #ffffff;
+  font-family: "Figtree", Arial, Helvetica;
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 20px;
+  border-radius: 5px;
+  border-width: 1px;
+  margin: 10px auto;
+  width: 75%;
+  cursor: pointer;
 }
 
 #menu button:hover {
-    background-color: #3d5b88;
+  background-color: #3d5b88;
 }
 
 #menu form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 #menu form fieldset {
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px 0px;
-    background-color: #DB0015;
-    width: 75%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0px;
+  background-color: #db0015;
+  width: 75%;
 }
 
 #menu form legend {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    font-family: "Figtree", Arial, Helvetica;
-    font-weight: 800;
-    background-color: #1b2a41;
-    color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 5px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-family: "Figtree", Arial, Helvetica;
+  font-weight: 800;
+  background-color: #1b2a41;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 #menu form input {
-    padding: 10px;
-    border-radius: 5px;
-    border-width: 1px;
-    min-width: 200px;
-    width: 100%;
+  font-family: "Nunito", Arial, Helvetica;
+  padding: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  min-width: 200px;
+  width: 100%;
 }
 
+#menu form textarea {
+  font-family: "Nunito", Arial, Helvetica;
+  padding: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  min-width: 200px;
+  width: 100%;
+}
 
 #tasks {
-    margin: 10px auto;
-    padding: 20px;
-    border: 2px dashed #ffffff;
-    border-radius: 10px;
-    text-align: center;
-    background-color: #FF5A55;
-    color: #ffffff;
+  margin: 10px auto;
+  padding: 20px;
+  border: 2px dashed #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #ff5a55;
+  color: #ffffff;
 }
 
 #tasks h2 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 #tasks ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0px;
 }
 
 .task {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin: 10px 0px;
-    padding: 20px;
-    border-radius: 10px;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 10px 0px;
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
 }
 
 .task div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 0;
 }
 
 .notes {
-    display: block;
-    width: 100%;
-    white-space: normal;
-    overflow-wrap: anywhere;
-    word-break: break-word;
+  display: block;
+  width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .task button {
-    background-color: #1b2a41;
-    color: #ffffff;
-    font-family: "Figtree", Arial, Helvetica;
-    font-weight: 800;
-    font-size: 1.2rem;
-    padding: 10px;
-    border-radius: 5px;
-    border-width: 1px;
-    margin: 10px 0px;
+  background-color: #1b2a41;
+  color: #ffffff;
+  font-family: "Figtree", Arial, Helvetica;
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  margin: 10px 0px;
 }
 
 .checkbox {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .past {
-    background-color: #DB0015;
+  background-color: #db0015;
 }
 .past button:hover {
-    background-color: #3d5b88;
+  background-color: #3d5b88;
 }
 
-.past div{
-    background-color: #FF5A55;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    width: 100%;
+.past div {
+  background-color: #ff5a55;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
 }
-
 
 .today {
-    background-color: #3d5b88;
+  background-color: #3d5b88;
 }
 .today button {
-    background-color: #3d5b88;
+  background-color: #3d5b88;
 }
 .today button:hover {
-    background-color: #FF5A55;
-    color: black;
+  background-color: #ff5a55;
+  color: black;
 }
 
-.today div{
-    background-color: #1b2a41;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    width: 100%;
+.today div {
+  background-color: #1b2a41;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
 }
 
 .due {
-    background-color: #1b2a41;
+  background-color: #1b2a41;
 }
 .due button {
-    background-color: #DB0015;
-    color: #ffffff;
+  background-color: #db0015;
+  color: #ffffff;
 }
 .due button:hover {
-    background-color: #FF5A55;
-    color: black;
+  background-color: #ff5a55;
+  color: black;
 }
 
-.due div{
-    background-color: #3d5b88;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    width: 100%;
+.due div {
+  background-color: #3d5b88;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
 }

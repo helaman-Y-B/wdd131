@@ -14,4 +14,20 @@ navbutton.addEventListener('click', () => {
     });
 });
 
+const taskList = document.querySelector("#tasks ul");
+
+// Event Delegation
+taskList.addEventListener("click", (e) => {
+    // Check if the clicked element has the class "deleteBtn"
+    if (e.target.classList.contains("deleteBtn")) {
+        
+        // Find the closest tasks and remove it
+        const taskItem = e.target.closest(".task");
+        
+        if (taskItem) {
+            taskItem.remove();
+            console.log("Task deleted!");
+        }
+    }
+});
 
