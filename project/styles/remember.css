@@ -137,6 +137,13 @@ main {
   margin: 10px 0px;
 }
 
+.task label {
+  font-family: "Figtree", Arial, Helvetica;
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
 .checkbox {
   width: 20px;
   height: 20px;
