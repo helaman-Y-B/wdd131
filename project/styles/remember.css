@@ -32,6 +32,42 @@ main {
     background-color: #3d5b88;
 }
 
+#menu form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#menu form fieldset {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0px;
+    background-color: #DB0015;
+    width: 75%;
+}
+
+#menu form legend {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: "Figtree", Arial, Helvetica;
+    font-weight: 800;
+    background-color: #1b2a41;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#menu form input {
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 1px;
+    min-width: 200px;
+    width: 100%;
+}
+
+
 #tasks {
     margin: 10px auto;
     padding: 20px;
@@ -69,6 +105,15 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    min-width: 0;
+}
+
+.notes {
+    display: block;
+    width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .task button {
@@ -88,30 +133,57 @@ main {
     height: 20px;
 }
 
-#past {
+.past {
     background-color: #DB0015;
 }
-#past button:hover {
+.past button:hover {
     background-color: #3d5b88;
 }
 
+.past div{
+    background-color: #FF5A55;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
 
-#today {
+
+.today {
     background-color: #3d5b88;
 }
-#today button:hover {
+.today button {
+    background-color: #3d5b88;
+}
+.today button:hover {
     background-color: #FF5A55;
     color: black;
 }
 
-#due {
+.today div{
+    background-color: #1b2a41;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.due {
     background-color: #1b2a41;
 }
-#due button {
+.due button {
     background-color: #DB0015;
     color: #ffffff;
 }
-#due button:hover {
+.due button:hover {
     background-color: #FF5A55;
     color: black;
+}
+
+.due div{
+    background-color: #3d5b88;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
 }

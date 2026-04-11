@@ -1,0 +1,135 @@
+// Opens a form to add a task when the "Add Task" button is clicked
+const addTaskBtn = document.getElementById("add-task");
+let formCount = 0; // To keep track of the number of forms created
+
+addTaskBtn.addEventListener("click", () => {
+    const taskForm = document.createElement("form");
+    taskForm.id = "task-form";
+    taskForm.method = "post";
+    taskForm.onsubmit = (e) => e.preventDefault(); // Prevent form submission for now
+    const formPlace = document.getElementById("menu");
+
+    if (formCount > 0) {
+        alert("Please complete the existing form before adding a new task.");
+        return;
+    }
+
+    taskForm.innerHTML = `
+        <fieldset>
+            <legend>Enter task</legend>
+            <input type="text" id="task-input" placeholder="Buy...">
+        </fieldset>
+        <fieldset>
+            <legend>Due date</legend>
+            <input type="date" id="due-date">
+        </fieldset>
+        <fieldset>
+            <legend>Notes</legend>
+            <input type="text" id="task-notes" placeholder="Additional notes...">
+        </fieldset>
+        <button id="submit-task" type="button">Add</button>
+        <button id="cancel-task" type="button">Cancel</button>
+    `;
+    formPlace.appendChild(taskForm);
+    formCount++;
+
+    // Add Cancel Functionality
+    const cancelTaskBtn = document.getElementById("cancel-task");
+    cancelTaskBtn.addEventListener("click", () => {
+        formCount--;
+        formPlace.removeChild(document.getElementById("task-form"));
+    });
+
+    // Add Task Functionality
+    const submitTaskBtn = document.getElementById("submit-task");
+    submitTaskBtn.addEventListener("click", () => {
+        const taskInput = document.getElementById("task-input").value;
+        if (taskInput) {
+            const taskListDiv = document.querySelector("#tasks ul");
+            taskListDiv.innerHTML += `
+                <li class="task">
+                ${taskInput[0].toUpperCase() + taskInput.slice(1)}
+                    <div>
+                        <span class="due-date">Due: ${document.getElementById("due-date").value}</span>
+                        <span class="notes">Notes: ${document.getElementById("task-notes").value}</span>
+                        <button>Delete</button>
+                        <input type="checkbox" class="checkbox" name="check-task">
+                    </div>
+                </li>
+            `;
+            dueStyle();
+            formCount--;
+            formPlace.removeChild(document.getElementById("task-form"));
+        }
+    });
+})
+
+function dueStyle() {
+    const tasks = document.querySelectorAll(".task");
+    tasks.forEach(task => {
+
+        // Parse the due date from the text content and compare it with today's date
+        const dueDate = task.querySelector(".due-date").textContent;
+        const taskDate = dueDate.split("Due: ")[1]; // Extract the date part
+        compareDates(taskDate, task);
+    })
+}
+
+// Helper function to get today's date in YYYY-MM-DD format for comparison
+function getDate() {
+    const today = new Date();
+    const day = String(today.getDate()).padStart(2, '0');
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const year = today.getFullYear();
+    return `${year}-${month}-${day}`;
+}
+
+// Function to compare due date with today's date and set the appropriate class for styling
+function compareDates(dueDate, task) {
+    const today = getDate(); // Returns YYYY-MM-DD format
+    const [todayYear, todayMonth, todayDay] = today.split("-");// Split today's date into components
+    // Converts to numbers for comparison
+    const todayYearNum = parseInt(todayYear);
+    const todayMonthNum = parseInt(todayMonth);
+    const todayDayNum = parseInt(todayDay);
+
+    const [dueYear, dueMonth, dueDay] = dueDate.split("-");// Split due date into components
+    // Converts to numbers for comparison
+    const dueYearNum = parseInt(dueYear);
+    const dueMonthNum = parseInt(dueMonth);
+    const dueDayNum = parseInt(dueDay);
+
+    if (dueYearNum < todayYearNum) {
+        // Task is past due
+        task.className = "task past"; 
+        return; // Exit the function after setting the class
+    } else if (dueYearNum > todayYearNum) {
+        // Task is due in the future
+        task.className = "task due";
+        return;
+    } else {
+        if (dueMonthNum < todayMonthNum) {
+            // Task is past due
+            task.className = "task past";
+            return;
+        } else if (dueMonthNum > todayMonthNum) {
+            // Task is due in the future
+            task.className = "task due";
+            return;
+        } else {
+            if (dueDayNum < todayDayNum) {
+                // Task is past due
+                task.className = "task past";
+                return;
+            } else if (dueDayNum > todayDayNum) {
+                // Task is due in the future
+                task.className = "task due";
+                return;
+            } else {
+                // Task is due today
+                task.className = "task today";
+                return;
+            }
+        }
+    }
+}

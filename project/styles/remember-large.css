@@ -13,17 +13,20 @@
     }
 
     .task {
-        max-width: 300px;
+        max-width: 400px;
         width: 100%;
-        display: grid;
-        grid-template-columns: 1fr auto;
-        align-items: center;
     }
 
     #menu {
         max-width: 1050px;
         margin: 0 auto;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    #menu form {
+        grid-column: span 2;
     }
 
     #menu button {

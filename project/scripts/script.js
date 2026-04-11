@@ -1,4 +1,4 @@
-
+// Navigation Toggle
 const navbutton = document.getElementById('navBtp');
 const navItems = document.querySelectorAll('nav ul li');
     
@@ -13,3 +13,5 @@ navbutton.addEventListener('click', () => {
         }
     });
 });
+
+
