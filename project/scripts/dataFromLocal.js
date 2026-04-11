@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         <span class="due-date">Due: ${task.date}</span>
                         <span class="notes">Notes: ${task.notes}</span>
                         <button class="deleteBtn">Delete</button>
-                        <label for="check-task">Completed?</label>
-                        <input type="checkbox" class="checkbox" name="check-task" ${task.completed ? "checked" : ""}>
+                        <label for="check-task-${task.id}">Completed?</label>
+                        <input id="check-task-${task.id}" type="checkbox" class="checkbox" name="check-task" ${task.completed ? "checked" : ""}>
                     </div>
                 </li>
             `;

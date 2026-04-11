@@ -54,8 +54,8 @@ addTaskBtn.addEventListener("click", () => {
                         <span class="due-date">Due: ${document.getElementById("due-date").value}</span>
                         <span class="notes">Notes: ${document.getElementById("task-notes").value}</span>
                         <button class="deleteBtn">Delete</button>
-                        <label for="check-task">Completed?</label>
-                        <input type="checkbox" class="checkbox" name="check-task">
+                        <label for="check-task-${id}">Completed?</label>
+                        <input id="check-task-${id}" type="checkbox" class="checkbox" name="check-task">
                     </div>
                 </li>
             `;
