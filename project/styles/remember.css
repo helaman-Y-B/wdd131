@@ -77,6 +77,35 @@ main {
   width: 100%;
 }
 
+#select-task-fieldset {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  border: none;
+  padding: 10px;
+  margin: 10px 0px;
+  background-color: #db0015;
+  width: 75%;
+}
+
+#select-task-fieldset label {
+  gap: 5px;
+  font-family: "Figtree", Arial, Helvetica;
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color:#ffffff;
+  background-color: #1b2a41;
+}
+
+#select-task-fieldset input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
 #tasks {
   margin: 10px auto;
   padding: 20px;
