@@ -79,7 +79,7 @@ main {
 
 #select-task-fieldset {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 10px;
   border: none;
@@ -89,21 +89,32 @@ main {
   width: 75%;
 }
 
+#select-task-fieldset p {
+  color: #ffffff;
+}
+
 #select-task-fieldset label {
+  display: flex;
+  flex-direction: column;
   gap: 5px;
   font-family: "Figtree", Arial, Helvetica;
   font-weight: 800;
   font-size: 1.2rem;
   padding: 5px 10px;
+  margin: auto;
+  width: 100%;
   border-radius: 5px;
   color:#ffffff;
   background-color: #1b2a41;
+  cursor: pointer;
 }
 
 #select-task-fieldset input[type="radio"] {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
+  margin: 10px auto;
+  cursor: pointer;
 }
 
 #tasks {

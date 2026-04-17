@@ -76,7 +76,8 @@ function getDataForEditTaskInLocal(id) {
         return data[0];
     } else if (data.length > 1) {
         for (let i = 0; i < data.length; i++) {
-            if (data[i].id === id) {
+            let task = String(data[i].id)
+            if (task === id) {
                 return data[i];
             }
         }
