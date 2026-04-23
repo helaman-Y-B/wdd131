@@ -1,17 +1,17 @@
 // Navigation Toggle
 const navbutton = document.getElementById('navBtp');
-const navItems = document.querySelectorAll('nav ul li');
+const liLinks = ["home.html", "feedback.html", "remember.html"]; // List of links to be added to the nav
+const nav = document.querySelector('nav ul');
     
 navbutton.addEventListener('click', () => {
-    navItems.forEach(item => {
-        if (item.style.display === 'block') {
-            item.style.display = 'none';
-            navbutton.textContent = '--';
-        } else {
-            item.style.display = 'block';
+    // Check if the nav has content, if not add the links, otherwise clear it
+    nav.innerHTML == "" ?  liLinks.forEach(link => {
+        // add the link to the nav and set the button text to 'X'
+            nav.innerHTML += `
+                <li><a href="${link}">${link.charAt(0).toUpperCase() + link.slice(1, -5)}</a></li>
+            `;
             navbutton.textContent = 'X';
-        }
-    });
+    }) : (nav.innerHTML = "" , navbutton.textContent = '--'); // Clear the nav and set the button text to '--'
 });
 
 const taskList = document.querySelector("#tasks ul");
@@ -25,8 +25,9 @@ taskList.addEventListener("click", (e) => {
         const taskItem = e.target.closest(".task");
         
         if (taskItem) {
+            // Get the task ID from the data attribute and delete it from local storage
             const taskId = Number(taskItem.dataset.id);
-            deleteTaskFromLocal(taskId)
+            deleteTaskFromLocal(taskId);
             taskItem.remove();
             console.log(`Task deleted with ID: ${taskId}`);
         }
@@ -44,14 +45,19 @@ function deleteTaskFromLocal(id) {
 
 // Handles the checkbox change event
 taskList.addEventListener("change", (e) => {
+    // Check if the changed element is a checkbox
   if (e.target.classList.contains("checkbox")) {
     const taskItem = e.target.closest(".task");
     const taskId = Number(taskItem.dataset.id);
     const tasks = JSON.parse(localStorage.getItem("myTasks")) || [];
     const task = tasks.find(task => task.id === taskId);
     if (task) {
+        // Update the completed status of the task and save it back to local storage
       task.completed = e.target.checked;
       localStorage.setItem("myTasks", JSON.stringify(tasks));
     }
   }
 });
+
+
+
