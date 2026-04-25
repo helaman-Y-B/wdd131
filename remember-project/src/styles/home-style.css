@@ -1,0 +1,139 @@
+main {
+  border: 5px none #db0015;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 20px;
+  background-color: #ff5a55;
+}
+
+main h1,
+h2 {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px dashed #ffffff;
+  margin-top: 10px;
+}
+
+#quick {
+  margin: 10px auto;
+  padding: 20px;
+  border: 2px dashed #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #db0015;
+  color: #ffffff;
+}
+
+#quick h3 {
+  font-size: 1.5rem;
+}
+
+#quick p {
+  font-size: 1.2rem;
+  margin: 10px 0px;
+}
+
+#quick a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #1b2a41;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+#quick a:hover {
+  background-color: #ff5a55;
+  color: black;
+}
+
+#demo {
+  margin: 10px auto;
+  padding: 20px;
+  border: 2px dashed #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #db0015;
+  color: #ffffff;
+}
+
+#demo h3 {
+  font-size: 1.5rem;
+}
+
+#demo div ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0px;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 10px 0px;
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.task div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.task button {
+  background-color: #1b2a41;
+  color: #ffffff;
+  font-family: "Figtree", Arial, Helvetica;
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+
+.check {
+  width: 20px;
+  height: 20px;
+}
+
+#past {
+  background-color: #ff5a55;
+  color: black;
+}
+#past button:hover {
+  background-color: #3d5b88;
+}
+
+#today {
+  background-color: #3d5b88;
+}
+#today button:hover {
+  background-color: #ff5a55;
+  color: black;
+}
+
+#due {
+  background-color: #1b2a41;
+}
+#due button {
+  background-color: #db0015;
+  color: #ffffff;
+}
+#due button:hover {
+  background-color: #ff5a55;
+  color: black;
+}

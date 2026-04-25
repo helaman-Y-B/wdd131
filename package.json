@@ -1,0 +1,24 @@
+{
+  "name": "wdd131",
+  "version": "1.0.0",
+  "description": "A create taks application to remember your todos.",
+  "homepage": "https://github.com/helaman-Y-B/wdd131#readme",
+  "bugs": {
+    "url": "https://github.com/helaman-Y-B/wdd131/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helaman-Y-B/wdd131.git"
+  },
+  "license": "ISC",
+  "author": "Helamã Y. Barbour",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemailer": "^8.0.5"
+  }
+}
