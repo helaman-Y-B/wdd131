@@ -1,5 +1,7 @@
 import HeroImg from '../../componants/mainPageComp/heroImg';
 import Demo from '../../componants/mainPageComp/demo';
+import '../styles/home-style.css'
+import '../styles/home-style-large.css'
 
 
 function MainPage() {
