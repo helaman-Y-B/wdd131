@@ -14,8 +14,18 @@ main {
   border-radius: 10px;
 }
 
-#menu button {
+.setForm {
   background-color: #1b2a41;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0px;
+  border-radius: 10px;
+}
+
+#menu button {
+  background-color: #3d5b88;
   color: #ffffff;
   font-family: "Figtree", Arial, Helvetica;
   font-weight: 800;
@@ -26,10 +36,11 @@ main {
   margin: 10px auto;
   width: 75%;
   cursor: pointer;
+  box-shadow: #3d5b88 1px 1px 30px;
 }
 
 #menu button:hover {
-  background-color: #3d5b88;
+  background-color: #db0015;
 }
 
 #menu form {
@@ -53,7 +64,7 @@ main {
   margin-bottom: 10px;
   font-family: "Figtree", Arial, Helvetica;
   font-weight: 800;
-  background-color: #1b2a41;
+  background-color: #3d5b88;
   color: #ffffff;
   padding: 5px 10px;
   border-radius: 5px;
