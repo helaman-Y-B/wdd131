@@ -16,7 +16,7 @@ function MainPage() {
                     <p>Remember Again is here to help you capture those fleeting thoughts, brilliant ideas, and important tasks
                         before they slip away. Whether it's a sudden inspiration, a to-do list item, or a random thought, our
                         platform provides a simple and intuitive way to jot it down and keep it safe for later.</p>
-                    <a href="remember.html">Remember It!</a>
+                    <a href="/remember">Remember It!</a>
                 </div>
                 <Demo />
             </main>

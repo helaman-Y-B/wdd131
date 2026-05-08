@@ -12,6 +12,10 @@ const router = createBrowserRouter([
     {
         path: "/remember",
         element: <Remember/>
+    },
+    {
+        path: "/feedback",
+        element: <MainPage/>  // Placeholder - replace with actual Feedback component
     }
 ])
 
